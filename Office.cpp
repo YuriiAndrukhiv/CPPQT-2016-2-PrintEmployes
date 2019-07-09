@@ -29,7 +29,10 @@ std::string Office::getOfficeName() const
 
 void Office::setOfficeName(std::string on)
 {
-    officeName = on;
+    if (!on.empty())
+    {
+       officeName = on;
+    }
 }
 
 std::string Office::getAddressName() const
@@ -39,7 +42,10 @@ std::string Office::getAddressName() const
 
 void Office::setAddressName(std::string an)
 {
-    addressName = an;
+    if (!an.empty())
+    {
+      addressName = an;
+    }
 }
 
 int Office::getWorkingArea() const

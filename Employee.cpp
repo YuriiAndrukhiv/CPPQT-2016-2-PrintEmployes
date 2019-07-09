@@ -31,7 +31,10 @@ std::string Employee::getName() const
 
 void Employee::setName(std::string n)
 {
-    name = n;
+    if (!n.empty())
+    {
+        name = n;
+    }
 }
 
 std::string Employee::getPhoneNumber() const
@@ -41,7 +44,10 @@ std::string Employee::getPhoneNumber() const
 
 void Employee::setPhoneNumber(std::string p)
 {
-    phoneNumber = p;
+    if (!p.empty())
+    {
+        phoneNumber = p;
+    }
 }
 
 std::string Employee::getHomeAddres() const
@@ -51,7 +57,10 @@ std::string Employee::getHomeAddres() const
 
 void Employee::setHomeAddres(std::string h)
 {
-    homeAddress = h;
+    if (!h.empty())
+    {
+       homeAddress = h;
+    }
 }
 
 int Employee::getSalary() const
@@ -71,5 +80,6 @@ int Employee::getStartYear() const
 
 void Employee::setStartYear(int st)
 {
+
     startYear = st;
 }
